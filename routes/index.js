@@ -17,7 +17,7 @@ router.get("/", checkAuthenticated, async (req, res) => {
 })
 
 router.get("/signup", checkNotAuthenticated, (req, res) => {
-    res.render("signup")
+    res.render("signUp")
 })
 
 router.post("/signup", checkNotAuthenticated, async (req, res) => {
