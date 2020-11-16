@@ -1,0 +1,43 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: red;
+}
+
+#account-list {
+    padding: 0;
+}
+
+.account {
+    list-style: none;
+}
+
+.user-handle-input {
+    display: none;
+}
+
+.account [type="checkbox"]:checked ~ .user-handle-input {
+    display: block;
+}
+
+.social-media-display-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-display {
+    width: 320px;
+    height: 610px;
+    overflow-y: auto;
+    margin: 2rem auto;
+    background-color: white;
+}
+
+.social-media-display > * {
+    margin: 0 auto;
+    display: block;
+}

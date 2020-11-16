@@ -1,0 +1,18 @@
+<section class="social-media-display-section" 
+    <% if(locals.hidden) { %>
+        style="display:none"
+    <% } %> >
+    <% if (locals.hidden) { %>
+        <div class="twitter-stuff social-media-display"></div>
+        <div class="facebook-stuff social-media-display"></div>
+        <div class="instagram-stuff social-media-display"></div>
+    <% } else Object.keys(profile.accounts).forEach(socialMediaPlatform => { %>
+        <div class="<%= socialMediaPlatform.toLowerCase() %>-stuff social-media-display"></div>
+    <% }) %>
+</section>
+<template id="ig-page-template">
+    <iframe class="ig" src="" height="600" width="300" frameborder="no"></iframe>
+</template>
+<template id="fb-page-template">
+    <iframe src="" width="320" height="600" frameborder="no" allowTransparency="true" allow="encrypted-media"></iframe>
+</template>

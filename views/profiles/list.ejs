@@ -1,0 +1,6 @@
+<h1>Profiles that you Lurk</h1>
+<% if(profiles) profiles.forEach(profile => { %>
+    <div> <a href="/profiles/<%= profile.id %>"><%= profile.name %></a> </div>
+<% }) %> 
+
+<div> <a href="/profiles/new">Add Profile</a> </div>

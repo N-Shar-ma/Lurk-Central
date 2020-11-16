@@ -1,0 +1,11 @@
+<script>
+    const userId = "<%= user.id %>"
+</script>
+<script src="/scripts/validateProfileForm.js" type="module"></script>
+<h1>Create Profile</h1>
+<form id="add-person" action="/profiles" data-method="POST">
+    <%- include("../partials/profileForm", { profile: profile }) %>
+<button type="submit">Create Profile</button>
+</form>
+<a href="/profiles">Cancel</a>
+<%- include("../partials/socialMediaFeed", { hidden : true }) %>  

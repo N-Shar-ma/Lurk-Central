@@ -1,0 +1,24 @@
+<label>Choose a profile name:<input type="text" id="profile-name" value="<%= profile.name %>" required></label>
+<ul id="account-list">
+    <li class="account" data-social-media-platform="Twitter">
+        <input type="checkbox" id="twitter-account-checkbox" <% if (profile.accounts && profile.accounts.Twitter) { %>
+            checked
+        <% } %>>
+        <label for="twitter-account-checkbox">Twitter Account</label>
+        <input type="text" class="user-handle-input" value="<%= profile.accounts && profile.accounts.Twitter %>">
+    </li>
+    <li class="account" data-social-media-platform="Facebook">
+        <input type="checkbox" id="facebook-account-checkbox" <% if (profile.accounts && profile.accounts.Facebook) { %>
+            checked
+            <% } %>>
+        <label for="facebook-account-checkbox">Facebook Account</label>
+        <input type="text" class="user-handle-input" value="<%= profile.accounts && profile.accounts.Facebook %>">
+    </li>
+    <li class="account" data-social-media-platform="Instagram">
+        <input type="checkbox" id="instagram-account-checkbox" <% if (profile.accounts && profile.accounts.Instagram) { %>
+            checked
+            <% } %>>
+        <label for="instagram-account-checkbox">Instagram Account</label>
+        <input type="text" class="user-handle-input" value="<%= profile.accounts && profile.accounts.Instagram %>">
+    </li>
+</ul>
