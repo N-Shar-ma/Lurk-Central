@@ -53,7 +53,7 @@ function getAccountsToAdd (accountCheckboxes) {
     const accountsToAdd = checkedAccountCheckboxes.map(checkbox => (
         {
             socialMediaPlatform : checkbox.parentElement.dataset.socialMediaPlatform,
-            userHandle : checkbox.parentElement.querySelector(".user-handle-input").value
+            userHandle : checkbox.parentElement.querySelector(".user-handle-input").value.trim().split("@").join("")
         }
         ))
     return accountsToAdd
