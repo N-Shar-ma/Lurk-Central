@@ -1,7 +1,9 @@
-<h1>Welcome, <%= user.name %></h1>
+<h2>👋 Welcome, <%= user.name %>!</h2>
 
-<% if(profiles) { %>
- <div> <a href="/profiles">List of all your Profiles</a> </div>
-<% } %> 
-
- <div> <a href="/profiles/new">Add Profile</a> </div>
+<section class="dashboard-buttons">
+    <% if(profiles) { %>
+     <div> <a href="/profiles">List of all your Profiles 👤</a> </div>
+    <% } %> 
+    
+     <div> <a href="/profiles/new">Add Profile ➕</a> </div>
+</section>

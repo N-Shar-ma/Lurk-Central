@@ -1,6 +1,6 @@
-<h1>Profiles that you Lurk</h1>
+<h2>Profiles that you Lurk</h2>
 <% if(profiles) profiles.forEach(profile => { %>
-    <div> <a href="/profiles/<%= profile.id %>"><%= profile.name %></a> </div>
+    <div> <a class="profile" href="/profiles/<%= profile.id %>"><%= profile.name %></a> </div>
 <% }) %> 
 
-<div> <a href="/profiles/new">Add Profile</a> </div>
+<div> <a href="/profiles/new">Add Profile ➕</a> </div>

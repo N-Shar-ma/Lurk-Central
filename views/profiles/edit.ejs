@@ -3,10 +3,10 @@
     const profId = "<%= profile.id %>"
 </script>
 <script src="/scripts/validateProfileForm.js" type="module"></script>
-<h1>Edit Profile</h1>
+<h2>Edit Profile</h2>
 <form id="add-person" action="/profiles/<%= profile.id %>" data-method="PUT">
     <%- include("../partials/profileForm", { profile: profile }) %>
-    <button type="submit">Edit Profile</button>
+    <button type="submit">Edit Profile ✎</button>
 </form>
-<a href="/profiles/<%= profile.id %>">Cancel</a>
+<a href="/profiles/<%= profile.id %>">Cancel ❌</a>
 <%- include("../partials/socialMediaFeed", { hidden : true }) %>  
