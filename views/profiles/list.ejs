@@ -1,6 +1,10 @@
 <h2>Profiles that you Lurk</h2>
-<% if(profiles) profiles.forEach(profile => { %>
-    <div> <a class="profile" href="/profiles/<%= profile.id %>"><%= profile.name %></a> </div>
-<% }) %> 
+<% if(profiles) { %>
+    <section class="profiles-grid">
+        <% profiles.forEach(profile => { %>
+            <a class="profile" href="/profiles/<%= profile.id %>"><%= profile.name %></a>
+        <% }) %> 
+    </section>
+<% } %>
 
 <div> <a href="/profiles/new">Add Profile ➕</a> </div>
