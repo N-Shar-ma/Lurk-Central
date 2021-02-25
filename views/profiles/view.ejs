@@ -1,6 +1,7 @@
 <script>
     const accounts = JSON.parse('<%-JSON.stringify(profile.accounts)%>')
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/InstagramFeed/2.0.2/InstagramFeed.min.js" type="module"></script>
 <script src="/scripts/loadFeed.js" type="module"></script>
 <h2><%= profile.name %> </h2>
 <a href="/profiles/<%= profile.id %>/edit">Edit Profile ✎</a>

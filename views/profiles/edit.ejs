@@ -2,6 +2,7 @@
     const userId = "<%= user.id %>"
     const profId = "<%= profile.id %>"
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/InstagramFeed/2.0.2/InstagramFeed.min.js" type="module"></script>
 <script src="/scripts/validateProfileForm.js" type="module"></script>
 <h2>Edit Profile</h2>
 <form id="add-person" action="/profiles/<%= profile.id %>" data-method="PUT">
