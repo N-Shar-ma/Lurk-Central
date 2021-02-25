@@ -67,14 +67,21 @@ async function getFilteredInstagramData (userHandle) {
 
 async function fetchInstagramUserData (userHandle) {
     try {
-        const res = await fetch(`https://www.instagram.com/${userHandle}`);
-        if(!res.ok) throw Error(res.status === 404 ? "This Instagram page could not be found" : `Error code ${res.status} occured on trying to access this Instagram page`)
-        const resText = await res.text();
-        const rawData = resText
-        .split("window._sharedData = ")[1]
-        .split(";</script>")[0];
-        const rawJson = JSON.parse(rawData);
-        return rawJson.entry_data.ProfilePage[0].graphql.user
+        // const res = await fetch(`https://www.instagram.com/${userHandle}`);
+        // if(!res.ok) throw Error(res.status === 404 ? "This Instagram page could not be found" : `Error code ${res.status} occured on trying to access this Instagram page`)
+        // const resText = await res.text();
+        // const rawData = resText
+        // .split("window._sharedData = ")[1]
+        // .split(";</script>")[0];
+        // const rawJson = JSON.parse(rawData);
+        // return rawJson.entry_data.ProfilePage[0].graphql.user
+        let rawJson
+        new InstagramFeed({
+            'username': userHandle,
+            'callback': data => {
+                rawJson = data
+            }
+        })
     } catch (e) {
         throw Error(e.message)
     }
