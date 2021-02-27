@@ -104,12 +104,14 @@ function getInstagramPosts (userData) {
 function appendInstagramBioDiv (bio)
 {
     const bioDiv = document.createElement("div")
+    bioDiv.classList.add("bio")
     if(bio.text) {
         const bioTextNode = document.createTextNode(bio.text)
         bioDiv.append(bioTextNode)
     }
     if(bio.link) {
         const bioLinkAnchor = document.createElement("a")
+        bioLinkAnchor.classList.add("bio-link")
         bioLinkAnchor.href = bio.link
         const bioLinkText = bio.link.split("://")[1]
         bioLinkAnchor.innerText = bioLinkText.length > 40 ? bioLinkText.substring(0, 39) + "..." : bioLinkText

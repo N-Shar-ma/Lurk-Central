@@ -3,8 +3,10 @@
 </script>
 <script src="/scripts/loadFeed.js" type="module"></script>
 <h2><%= profile.name %> </h2>
-<a href="/profiles/<%= profile.id %>/edit">Edit Profile ✎</a>
-<form action="/profiles/<%= profile.id %>/?_method=DELETE" method="POST">
-<button type="submit">Delete Profile ❌</button>
-</form>
+<div class="profile-buttons">
+    <a class="custom-button" href="/profiles/<%= profile.id %>/edit">Edit Profile ✎</a>
+    <form action="/profiles/<%= profile.id %>/?_method=DELETE" method="POST">
+        <button class="custom-button" type="submit">Delete Profile ❌</button>
+    </form>
+</div>
 <%- include("../partials/socialMediaFeed", { profile: profile })  %>

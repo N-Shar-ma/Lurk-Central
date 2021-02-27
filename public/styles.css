@@ -8,6 +8,13 @@ a {
     text-decoration: none;
 }
 
+button {
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 html {
     height: 100%;
 }
@@ -48,7 +55,7 @@ header {
 
 header a, .dashboard-buttons a {
     position: relative;
-    font-weight: bold;
+    color: white;
 }
 
 header a::after, .dashboard-buttons a::after {
@@ -93,6 +100,24 @@ header a:hover::after, .dashboard-buttons a:hover::after {
     box-shadow: black 5px 5px 5px 5px;
 }
 
+.profile-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: black 2px 2px 3px 3px;
+    transition: color 300ms ease-in-out;
+}
+
+.custom-button:hover {
+    color:red;
+}
+
 #account-list {
     padding: 0;
 }
@@ -127,4 +152,15 @@ header a:hover::after, .dashboard-buttons a:hover::after {
 .social-media-display > * {
     margin: 0 auto;
     display: block;
+}
+
+.instagram-stuff .bio {
+    text-align: center;
+    font-weight: bold;
+}
+
+.instagram-stuff .bio-link {
+    display: block;
+    font-weight: normal;
+    color: blue;
 }

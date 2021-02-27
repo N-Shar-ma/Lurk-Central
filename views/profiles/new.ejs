@@ -5,7 +5,7 @@
 <h2>Create Profile</h2>
 <form id="add-person" action="/profiles" data-method="POST">
     <%- include("../partials/profileForm", { profile: profile }) %>
-<button type="submit">Create Profile ➕</button>
+<button class="custom-button" type="submit">Create Profile ➕</button>
 </form>
-<a href="/profiles">Cancel ❌</a>
+<a class="custom-button" href="/profiles">Cancel ❌</a>
 <%- include("../partials/socialMediaFeed", { hidden : true }) %>  
