@@ -3,9 +3,9 @@
 </script>
 <script src="/scripts/validateProfileForm.js" type="module"></script>
 <h2>Create Profile</h2>
-<form id="add-person" action="/profiles" data-method="POST">
+<form id="add-person" class="centered-form" action="/profiles" data-method="POST">
     <%- include("../partials/profileForm", { profile: profile }) %>
-<button class="custom-button" type="submit">Create Profile ➕</button>
+<button class="custom-button centered imp" type="submit">Create Profile ➕</button>
 </form>
-<a class="custom-button" href="/profiles">Cancel ❌</a>
+<a class="custom-button centered" href="/profiles">Cancel ❌</a>
 <%- include("../partials/socialMediaFeed", { hidden : true }) %>  

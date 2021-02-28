@@ -3,18 +3,6 @@
     /* outline: 1px solid white; */
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button {
-    border: none;
-    font-size: 1rem;
-    font-family: inherit;
-    cursor: pointer;
-}
-
 html {
     height: 100%;
 }
@@ -27,6 +15,23 @@ body {
     padding: 0 1rem;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+hr {
+    border-color: black;
+    width: 100%;
+}
+
 h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -34,7 +39,7 @@ h1 {
     margin: 0;
 }
 
-h2 {
+h2, h4 {
     text-align: center;
 }
 
@@ -43,6 +48,10 @@ header {
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
+}
+
+.about {
+    margin: 0.5rem 0;
 }
 
 .dashboard-buttons {
@@ -106,7 +115,8 @@ header a:hover::after, .dashboard-buttons a:hover::after {
 }
 
 .custom-button {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     padding: 0.2rem 0.5rem;
     background-color: white;
     border-radius: 5px;
@@ -114,8 +124,37 @@ header a:hover::after, .dashboard-buttons a:hover::after {
     transition: color 300ms ease-in-out;
 }
 
+.centered {
+    margin: 1rem auto;
+}
+
+.imp {
+    font-weight: bold;
+}
+
 .custom-button:hover {
     color:red;
+}
+
+.centered-form, .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centered-form label {
+    padding: 0.5rem;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    padding: 0.2rem 0.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    outline: none;
 }
 
 #account-list {
@@ -124,6 +163,7 @@ header a:hover::after, .dashboard-buttons a:hover::after {
 
 .account {
     list-style: none;
+    margin: 1rem;
 }
 
 .user-handle-input {

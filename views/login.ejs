@@ -2,10 +2,10 @@
 <% if (messages.error) { %>
  <%= messages.error %> 
 <% } %>
-<form action="/login" method="POST">
+<form class="centered-form" action="/login" method="POST">
     <label>Email <input type="email" name="email"></label>
     <label>Password <input type="password" name="password"></label>
-    <button type="submit">Login</button>
+    <button class="custom-button centered imp" type="submit">Login</button>
 </form>
-<a href="/signup">Sign Up</a>
+<a class="custom-button centered" href="/signup">Sign Up Instead</a>
 <%- include("./partials/about") %>  

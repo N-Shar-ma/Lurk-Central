@@ -4,9 +4,9 @@
 </script>
 <script src="/scripts/validateProfileForm.js" type="module"></script>
 <h2>Edit Profile</h2>
-<form id="add-person" action="/profiles/<%= profile.id %>" data-method="PUT">
+<form id="add-person" class="centered-form" action="/profiles/<%= profile.id %>" data-method="PUT">
     <%- include("../partials/profileForm", { profile: profile }) %>
-    <button type="submit">Edit Profile ✎</button>
+    <button class="custom-button centered imp" type="submit">Edit Profile ✎</button>
 </form>
-<a href="/profiles/<%= profile.id %>">Cancel ❌</a>
+<a class="custom-button centered" href="/profiles/<%= profile.id %>">Cancel ❌</a>
 <%- include("../partials/socialMediaFeed", { hidden : true }) %>  
